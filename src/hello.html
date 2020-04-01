@@ -1,0 +1,82 @@
+<!DOCTYPE html><!--html声明-->
+<html lang="zh_CN"><!--语言-->
+<head>
+    <meta charset="UTF-8"><!--编码字符集-->
+    <title>这是标题</title><!--标题-->
+</head>
+<!--bgcolor表示背景颜色-->
+<body><!--可以直接设置事件响应代码-->
+<!--页面主体内容-->
+这是HTML页面的内容<br/>
+<!--<br/>表示换行-->
+<!--</hr>表示分割线-->
+<button onclick="alert('这是button');">这是按钮</button>
+    <hr/>
+<!--超链接用标签<a><\a>-->
+<!--href后面跟地址-->
+<!--target是新页面的位置
+    _elf表示在本页面打开
+    _black表示打开一个新页面-->
+<a href="http://www.baidu.com">百度</a><br/>
+<a href="http://www.baidu.com" target="_self">百度_self</a><br/>
+<a href="http://www.baidu.com" target="_blank">百度_black</a><br/>
+<hr/>
+<!--无序列表
+    <ul></ul>-->
+<ul>
+    <!--li=listItem就是列表的每一项-->
+    <li>张三</li>
+    <li>张四</li>
+    <li>张五</li>
+    <li>张六</li>
+</ul>
+<hr/>
+<!--有序列表
+    <ol></ol>-->
+<ol>
+    <li>张三</li>
+    <li>张四</li>
+    <li>张五</li>
+    <li>张六</li>
+</ol>
+<!--感觉有序列表就是比无序列表多了个序号-->
+<hr/>
+<!--相对路径：
+    .表示当前文件路径
+    ..表示当前文件所在的上一级目录
+    这里的当前文件指的是这个文件，就是正在写的这个文件，而不是要导入的文件
+    好像也不太对，这个相对路径应该指的是项目的路径
+    -->
+<!--alt设置当文件路径找不到的时候显示的文本信息-->
+<img src="./imgs/img1.jpg" width="230" height="150" border="3" alt="图片未加载到"/>
+<img src="./imgs/img2.jpg" width="230" height="150" border="3"/>
+<img src="./imgs/img3.jpg" width="230" height="150" border="3"/>
+<img src="./imgs/img4.jpg" width="230" height="150" border="3"/>
+<img src="./imgs/img5.jpg" width="230" height="150" border="3"/>
+<br>
+<table width="300" height="300" border="1" cellspacing="0">
+    <!--table表格-->
+    <!--cellspacing单元格间距-->
+
+    <tr>
+        <!--tr表示表格的每一行-->
+        <!--td表示表格的每一个单元格
+            align表示单元格内容的位置
+            <b>表示加粗字体-->
+        <!--而<th>就表示居中并加粗-->
+        <td align="center"><b>一行一列</b></td>
+        <th>一行二列</th>
+        <th>一行三列</th>
+    </tr>
+    <tr>
+        <td align="center"><b>二行一列</b></td>
+        <th>二行二列</th>
+        <th>二行三列</th>
+    </tr> <tr>
+    <td align="center"><b>三行一列</b></td>
+    <th>三行二列</th>
+    <th>三行三列</th>
+</tr>
+</table>
+</body>
+</html>
