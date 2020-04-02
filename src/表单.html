@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+</head>
+<body>
+这是一个表单<br>
+<hr/>
+<!--form标签就是表单-->
+<!--input type=text-->
+<!--是文件输入框value设置 默认显示内容-->
+<!--input type=password是密码输入框value设 置默认显示内容-->
+<!--input type-radio是 单选框-->
+<!--name属性可以对其进行分组-->
+<form>
+    用户名称：<input type="text" value="在此输入用户名"/><br>
+    用户密码：<input type="password"/><br>
+    性别：<input type="radio" name="sex"/>男<input type="radio" name="sex" checked="checked"/>女<br>
+    <!--checked="checked"表示默认选中-->
+    兴趣爱好：复选1<input type="checkbox"/>复选2<input type="checkbox"/> 复选3<input type="checkbox"/><br>
+    <!--select下拉列表-->
+    国籍：<select>
+    <option>请选择国籍</option>
+    <option selected="selected">中国</option>
+    <option>美国</option>
+    <option>其他</option>
+</select><br>
+    自我评价：<br><textarea rows="10" cols="30">默认值写在这里</textarea><br>
+    <input type="reset" value="重置"/> <input type="submit" value="提交"/>
+</form>
+<!--所以一般情况下把表单放在表格里-->
+<hr/>
+<hr/>
+<form>
+    <h3 align="center">用户注册/登陆</h3>
+    <table align="center" cellspacing="5">
+        <tr>
+            <td>用户名称：</td>
+            <td><input type="text" value="在此输入用户名"/></td>
+        </tr>
+        <tr>
+            <td>用户密码：</td>
+            <td><input type="password"/></td>
+        </tr>
+        <tr>
+            <td> 性别：</td>
+            <td>
+                <input type="radio" name="sex"/>男
+                <input type="radio" name="sex"/>女
+            </td>
+        </tr>
+        <tr>
+            <td>兴趣爱好：</td>
+            <td>
+                复选1<input type="checkbox"/>
+                复选2<input type="checkbox"/>
+                复选3<input type="checkbox"/>
+            </td>
+        </tr>
+        <tr>
+            <td>国籍：</td>
+            <td>
+                <select>
+                    <option>请选择国籍</option>
+                    <option selected="selected">中国</option>
+                    <option>美国</option>
+                    <option>其他</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>自我评价：</td>
+        </tr>
+        <tr>
+            <td colspan="2"><textarea rows="10" cols="30">默认值写在这里</textarea></td>
+        </tr>
+        <tr>
+            <td><input type="reset" value="重置"/></td>
+            <td align="center"><input type="submit" value="提交"/></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

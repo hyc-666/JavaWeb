@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+</head>
+<body>
+这是一个表单<br>
+<hr/>
+<!--form标签就是表单-->
+<!--input type=text-->
+<!--是文件输入框value设置 默认显示内容-->
+<!--input type=password是密码输入框value设 置默认显示内容-->
+<!--input type-radio是 单选框-->
+<!--name属性可以对其进行分组-->
+<!--所以一般情况下把表单放在表格里-->
+<hr/>
+<hr/>
+<!--
+    form标签是表单标签
+    action属性设置提交的服务器地址
+    method属性设置提交的方式GET(默认值)或POST
+    表单提交的时候，数据没有发送给服务器的三种情况:
+        1、表单项没有name属性值
+        2、单选、复选(下拉列表中的option标签)都需要添加value属性，以便发送给服务器
+        3、表单项不在form请求的标签中
+-->
+<form action="http://www.baidu.com" method="get">
+    <!--action表示提交信息给服务器，后面可以跟地址 method方法默认是get
+        需要提交给服务器的信息必须要有name属性值才可以提交给服务器
+        -->
+    <!--
+        GET请求的特点是:
+            1、浏览器地址栏中的地址是: action属 性[+?+请求参数]
+            请求参数的格式是: name=value&name=value
+            2、不安全
+            3、它有数据长度的限制
+        POST请求的特点是:
+            1、浏览器地址栏中只有action属性值
+            2、相对于GET请求要安全
+            3、理论.上没有数据长度的限制
+    -->
+    <input type="hidden" name="action" value="login"/>
+    <h3 align="center">用户注册/登陆</h3>
+    <table align="center" cellspacing="5">
+        <tr>
+            <td>用户名称：</td>
+            <td><input name="username" type="text" value="在此输入用户名"/></td>
+        </tr>
+        <tr>
+            <td>用户密码：</td>
+            <td><input name="password" type="password"/></td>
+        </tr>
+        <tr>
+            <td> 性别：</td>
+            <td>
+                <input type="radio" name="sex" value="boy"/>男
+                <input type="radio" name="sex" value="girl"/>女
+            </td>
+        </tr>
+        <tr>
+            <td>兴趣爱好：</td>
+            <td>
+                Java<input name="hobby" type="checkbox" value="java"/>
+                C<input name="hobby" type="checkbox" value="c"/>
+                C++<input name="hobby" type="checkbox" value="cpp"/>
+            </td>
+        </tr>
+        <tr>
+            <td>国籍：</td>
+            <td>
+                <select name="country">
+                    <option>请选择国籍</option>
+                    <option selected="selected" value="cn">中国</option>
+                    <option value="usa">美国</option>
+                    <option value="jp">日本</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>自我评价：</td>
+        </tr>
+        <tr>
+            <td colspan="2"><textarea name="desc" rows="10" cols="30">默认值写在这里</textarea></td>
+        </tr>
+        <tr>
+            <td><input type="reset" value="重置"/></td>
+            <td align="center"><input type="submit" value="提交"/></td>
+        </tr>
+    </table>
+    <!--这是提交信息
+    https://www.baidu.com/? 问号是分隔符
+    action=login& &符号也是分隔符
+    username=hyc666
+    &password=123456&
+    sex=on&hobby=on
+    &country=%E4%B8%AD%E5%9B%BD&
+    desc=haoshuai-->
+</form>
+</body>
+</html>
