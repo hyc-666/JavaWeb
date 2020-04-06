@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--正则表达式-->
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式</title>
+    <script text ="text/javascript">
+        //正则表达式
+        //var patt = new RegExp("e");//表示表达式中是否还有字符'e'。
+        function buttonOnclickFun(){
+            var usernameObj = document.getElementById("username");//获得标签元素
+            var patt = /^\w{5,12}$/;//规定正则表达式
+            var username = usernameObj.value;//获得用户输入的用户名
+            var usernameSpanObj = document.getElementById("usernameSpan");
+            if(patt.test(username)){//匹配正则表达式，test方法用于测试字符串是否匹配所规定的规则
+                usernameSpanObj.innerHTML = "用户名合法";
+            }else{
+                 usernameSpanObj.innerHTML = "用户名不合法";
+            }
+        }
+
+    </script>
+</head>
+<body>
+<form>
+    输入用户名：
+    <input id="username" type="text" value="xxx"/>
+    <span id="usernameSpan" style="color:red;"></span>
+    <button onclick="buttonOnclickFun()">检查用户名</button>
+    <!--虽然效果达到了，但是为什么是一闪而过的效果呢?
+        以后问大佬吧，白嫖的资源就知足吧。。-->
+</form>
+</body>
+</html>

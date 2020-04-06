@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>getElementsByName</title>
+    <script type="text/javascript">
+        //先得到三个复选框的信息
+        function checkAll(){
+            var checkObj = document.getElementsByName("hobby");
+            for(var i = 0;i < checkObj.length;i++){
+                checkObj[i].checked = true;
+            }
+        }
+        function checkNo(){
+            var checkObj = document.getElementsByName("hobby");
+            for(var i = 0;i < checkObj.length;i++){
+                checkObj[i].checked = false;
+            }
+        }
+        function checkReverse(){
+            var checkObj = document.getElementsByName("hobby");
+            //另外直接取反就可以了
+            for(var i = 0;i < checkObj.length;i++){
+                checkObj[i].check = !checkObj.check;
+            }
+            /*for(var i = 0;i < checkObj.length;i++){
+                if(checkObj[i].checked){
+                    checkObj[i].checked = false;
+                }else{
+                    checkObj[i].checked = true;
+                }
+            }*/
+            //不过我的代码为什么老是一闪而过呢
+        }
+
+    </script>
+</head>
+<body>
+<form>
+    兴趣爱好：
+    <input type="checkbox" name="hobby" value="cpp">C++
+    <input type="checkbox" name="hobby" value="java">Java
+    <input type="checkbox" name="hobby" value="js">JavaScript
+    <br/>
+    <button onclick="checkAll()">全选</button>
+    <button onclick="checkNo()">全不选</button>
+    <button onclick="checkReverse()">反选</button>
+</form>
+</body>
+</html>
